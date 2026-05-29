@@ -1,0 +1,17 @@
+=== PINN Simulation Log ===
+
+Total Simulations: 5
+Lambda Initial Values: [0.001, 0.002, 0.01, 0.0001, -0.001]
+Network Architecture: [ 2 10 10 10 10  1]
+Max Iterations per Fold: 10000
+Number of Folds: 3
+
+=== Runtime Summary ===
+Lambda 0 (0.001): 8793.38s (146.56m)
+Lambda 1 (0.002): 8748.86s (145.81m)
+Lambda 2 (0.01): 8872.15s (147.87m)
+Lambda 3 (0.0001): 8874.40s (147.91m)
+Lambda 4 (-0.001): 8422.50s (140.38m)
+
+Total Runtime: 43711.32s (728.52m)
+Average Runtime per Lambda: 8742.26s

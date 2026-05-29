@@ -1,0 +1,16 @@
+=== PINN Simulation Log ===
+
+Total Simulations: 4
+Network Architectures: [[np.int64(2), np.int64(5), np.int64(5), np.int64(5), np.int64(5), np.int64(1)], [np.int64(2), np.int64(10), np.int64(10), np.int64(10), np.int64(10), np.int64(1)], [np.int64(2), np.int64(15), np.int64(15), np.int64(15), np.int64(15), np.int64(1)], [np.int64(2), np.int64(25), np.int64(25), np.int64(25), np.int64(25), np.int64(1)]]
+Lambda (fixed): 0.1
+Max Iterations per Fold: 10000
+Number of Folds: 3
+
+=== Runtime Summary ===
+Width 0 (neurons=5): 7513.31s (125.22m)
+Width 1 (neurons=10): 9231.33s (153.86m)
+Width 2 (neurons=15): 12577.10s (209.62m)
+Width 3 (neurons=25): 17083.73s (284.73m)
+
+Total Runtime: 46405.48s (773.42m)
+Average Runtime per Width: 11601.37s

@@ -1,0 +1,5 @@
+1. use geomety for the shade areas. use a more pale colour for filling as you did in @N_l_plotting
+2. remove the inset axis labels
+3. add the true value of 0.005/PI to the lambda plot
+4. 10 iterations for x axis inset.
+5. font 18 for error plot

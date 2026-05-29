@@ -1,0 +1,18 @@
+=== PINN Simulation Log ===
+
+Total Simulations: 5
+N_l Values: [3, 10, 100, 1000, 10000]
+Lambda Initialization: 0.1
+Network Architecture: [ 2 10 10 10 10  1]
+Max Iterations per Fold: 1000
+Number of Folds: 3
+
+=== Runtime Summary ===
+N_l 3: 874.74s (14.58m)
+N_l 10: 882.99s (14.72m)
+N_l 100: 829.49s (13.82m)
+N_l 1000: 847.26s (14.12m)
+N_l 10000: 939.66s (15.66m)
+
+Total Runtime: 4374.16s (72.90m)
+Average Runtime per N_l: 874.83s

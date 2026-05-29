@@ -1,0 +1,22 @@
+=== PINN Training Results ===
+
+Number of Labeled Points (N_l): 1000
+Lambda Initialization: 0.01
+Network Architecture: [ 2 10 10 10 10  1]
+Max Iterations: 10000
+Number of Folds: 3
+
+=== Final Values ===
+Final Mean Training Loss: 2.788749e-03
+Final Mean Test Loss: 1.792512e-03
+Final Mean Lambda: 7.051660e-03
+Final Mean Error: 7.274776e-02
+
+=== Performance Metrics ===
+Min Training Loss: 2.788749e-03
+Min Test Loss: 1.792512e-03
+Min Error: 7.274776e-02
+Mean Lambda (avg last 100): 7.082566e-03
+
+=== Runtime ===
+Elapsed Time: 8768.27 seconds (146.14 minutes)
