@@ -1,3 +1,25 @@
+"""
+Labelled-data sensitivity study for inverse PINN parameter recovery.
+
+This script trains an inverse Physics-Informed Neural Network (PINN) for the
+one-dimensional Burgers equation:
+
+    u_t + u u_x - lambda_2 u_xx = 0
+
+The aim is to study how the number of labelled interior solution points (N_l)
+affects recovery of the unknown physical parameter lambda_2. The PINN combines
+three sources of training information: boundary/initial-condition data,
+labelled interior solution data, and PDE-residual collocation points sampled
+using Latin Hypercube Sampling.
+
+For a selected N_l value, the script performs 3-fold cross-validation, trains
+one PINN per fold, and records training loss, test loss, relative L2 error, and
+the recovered lambda_2 trajectory. Results are saved as plots, a text summary,
+and an Excel file for later comparison across different labelled-data cases.
+
+Author: Amir Alizadeh
+"""
+
 import tensorflow as tf
 import datetime, os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"

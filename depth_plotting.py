@@ -1,3 +1,31 @@
+"""
+depth_vs_lambda.py
+
+Comparison plotting script for network-depth sensitivity experiments.
+
+This script reads results from multiple inverse Physics-Informed Neural Network
+(PINN) runs with different neural-network depths. Each depth case is expected
+to have its own folder containing a `results.xlsx` file with fold-wise training
+histories.
+
+The script compares how network depth affects:
+    - relative L2 error,
+    - recovered lambda_2 value,
+    - supervised test loss,
+    - training loss.
+
+For each metric, the script plots the mean trajectory across cross-validation
+folds and shades the ±1 standard-deviation region. An inset plot highlights the
+final optimisation iterations to make late-stage convergence easier to inspect.
+
+Research purpose:
+    To visualise how increasing the number of hidden layers influences inverse
+    PINN convergence, prediction accuracy, and physical parameter recovery for
+    the Burgers equation.
+
+Author: Amir Alizadeh
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

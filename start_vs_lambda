@@ -1,3 +1,26 @@
+"""
+start_lambda_plotting.py
+
+Initial-lambda sensitivity study for inverse PINN parameter recovery.
+
+This script trains an inverse Physics-Informed Neural Network (PINN) for the
+one-dimensional Burgers equation:
+
+    u_t + u u_x - lambda_2 u_xx = 0
+
+The aim is to study how different initial guesses for the unknown physical
+parameter lambda_2 affect convergence, prediction accuracy, and final parameter
+recovery.
+
+For each initial lambda_2 value, the script performs 3-fold cross-validation
+and records training loss, test loss, relative L2 error, and the recovered
+lambda_2 trajectory. Results are saved as plots, text summaries, Excel files,
+and comparison figures across all initialisations.
+
+Author: Amir Alizadeh
+"""
+
+
 import tensorflow as tf
 import datetime, os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"

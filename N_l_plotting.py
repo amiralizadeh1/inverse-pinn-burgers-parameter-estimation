@@ -1,3 +1,30 @@
+"""
+Comparison plotting script for labelled-data sensitivity experiments.
+
+This script reads the results produced by multiple inverse PINN runs with
+different numbers of labelled interior data points (N_l). Each N_l case is
+expected to have its own folder containing a `results.xlsx` file with fold-wise
+training histories.
+
+The script compares how N_l affects:
+    - relative L2 error,
+    - recovered lambda_2 value,
+    - supervised test loss,
+    - training loss.
+
+For each metric, the script plots the mean trajectory across cross-validation
+folds and shades the ±1 standard-deviation region. An inset plot shows the
+final 10 optimisation iterations to make late-stage convergence easier to
+inspect.
+
+Research purpose:
+    To visualise how increasing or decreasing labelled data availability
+    influences inverse PINN convergence, prediction accuracy, and physical
+    parameter recovery for the Burgers equation.
+
+Author: Amir Alizadeh
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

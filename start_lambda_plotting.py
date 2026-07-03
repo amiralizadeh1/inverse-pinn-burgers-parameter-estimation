@@ -1,3 +1,31 @@
+"""
+start_lambda_plotting.py
+
+Comparison plotting script for initial-lambda sensitivity experiments.
+
+This script reads results from multiple inverse Physics-Informed Neural Network
+(PINN) runs started from different initial guesses of the unknown Burgers
+equation parameter lambda_2.
+
+The script compares how the initial value of lambda_2 affects:
+    - relative L2 error,
+    - recovered lambda_2 trajectory,
+    - supervised test loss,
+    - training loss.
+
+Each initial-lambda case is expected to have its own folder containing a
+`results.xlsx` file with fold-wise training histories. For each metric, the
+script plots the mean trajectory across cross-validation folds and shades the
+±1 standard-deviation region. An inset plot highlights the final optimisation
+iterations to inspect late-stage convergence.
+
+Research purpose:
+    To visualise the sensitivity of inverse PINN parameter recovery to the
+    initial guess of lambda_2.
+
+Author: Amir Alizadeh
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

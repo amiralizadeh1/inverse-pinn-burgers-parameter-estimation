@@ -1,3 +1,26 @@
+"""
+width_vs_lambda.py
+
+Network-width sensitivity study for inverse PINN parameter recovery.
+
+This script trains an inverse Physics-Informed Neural Network (PINN) for the
+one-dimensional Burgers equation:
+
+    u_t + u u_x - lambda_2 u_xx = 0
+
+The aim is to study how neural-network width affects recovery of the unknown
+physical parameter lambda_2. Several fully connected architectures with the
+same depth but different numbers of neurons per hidden layer are defined, and
+one selected width case is trained in this script.
+
+For the selected architecture, the script performs 3-fold cross-validation and
+records training loss, test loss, relative L2 error, and the recovered lambda_2
+trajectory. Results are saved as plots and an Excel file for later comparison
+across different network-width cases.
+
+Author: Amir Alizadeh
+"""
+
 import tensorflow as tf
 import datetime, os, sys
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
