@@ -1,6 +1,0 @@
-seed: 2
-layers: [2 5 5 5 5 1]
-N_f:, 1000, N_b:, 100, N_l:, [1, 10, 100]
-max iteration: 10000
-
-run time (for the last run only)): 44.02924514214198(min)

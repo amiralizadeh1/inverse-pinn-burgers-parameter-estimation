@@ -1,3 +1,39 @@
+"""
+Inverse PINN for parameter identification in the Burgers equation.
+
+This script trains a Physics-Informed Neural Network (PINN) to solve an
+inverse problem for the one-dimensional Burgers equation:
+
+    u_t + u u_x - lambda_2 u_xx = 0
+
+The unknown physical parameter lambda_2 is treated as a trainable TensorFlow
+variable and is optimised together with the neural-network weights.
+
+The training loss combines three terms:
+    1. boundary/initial-condition loss,
+    2. labelled interior solution loss,
+    3. PDE-residual loss at collocation points.
+
+The script also performs 3-fold cross-validation over boundary and labelled
+training data to assess the stability of parameter recovery, training loss,
+test loss, and relative L2 prediction error.
+
+Input:
+    MATLAB .mat file containing x, t, and usol arrays for Burgers-equation data.
+
+Outputs:
+    Figures showing loss, test loss, recovered lambda_2, and relative L2 error.
+    A text summary and Excel file containing fold-wise and averaged results.
+
+Author:
+    Amir Alizadeh
+
+Research context:
+    PhD work on physics-informed data-driven modelling and inverse parameter
+    estimation under sparse labelled data.
+"""
+
+
 import tensorflow as tf
 import datetime, os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"

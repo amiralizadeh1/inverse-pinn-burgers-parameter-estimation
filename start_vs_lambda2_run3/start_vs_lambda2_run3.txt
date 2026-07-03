@@ -1,8 +1,0 @@
-foldername: start_vs_lambda2_run3
-seed: 3
-layers: [ 2 10 10 10 10  1]
-N_f:, 10000, N_b:, 100, N_l:, 100
-max iteration: 10000
-
-lambda2=, [np.float64(0.002121381452447151), np.float64(0.004001868719835113), np.float64(0.003743425834978737), np.float64(0.005567356434920398), np.float64(0.003663181016522484)]
-run time: 492.94413816928864 (min)
